@@ -9,6 +9,9 @@ html.body{
     display: grid;
     height: 100%;
 }
+body{
+    scroll-behavior: smooth;
+}
 .Container{
     display: flex;
     justify-content: center;
@@ -16,62 +19,66 @@ html.body{
 }
 .Container2{
     height: 80px;
-    width: 50vw;
+    width: 45vw;
     line-height: 80px;
     background: #fff;
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    position: relative;
+    z-index: 100;
 }
 .Container2 .menu{
     display: flex;
     position: relative;
 }
-.Container2 .menu .li{
+.Container2 .menu li{
     list-style: none;
     flex: 1;
     font-size: 30px;
     cursor: pointer;
     user-select: none;
 }
-.Container2 .menu .li .a{
+.Container2 .menu li a{
     color: #1d1f20;
     transition: color 0.3s ease;
 }
-.Container2 .menu .li:hover .a{
+.Container2 .menu li:hover a{
     color: #f23b26;
 }
-.Container2 .menu .li:first-child .a{
+.Container2 .menu li:first-child a{
     color: #f23b26;
 }
 .Container2 .menu .line{
-     height: 5px;
-     width: 20%;
-     background: #f23b26;
-     left: 0;
-     bottom: 0;
-     transition: all 0.3s ease;
+    position: absolute;
+    height: 5px;
+    width: 10%;
+    background: #f23b26;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
 }
-.Container2 .menu .li:nth-child(2):hover ~ .line{
-    left: 20%;
+.Container2 .menu li:nth-child(2):hover ~ .line{
+    left: 15%;
 }
-.Container2 .menu .li:nth-child(3):hover ~ .line{
-    left: 40%;
+.Container2 .menu li:nth-child(3):hover ~ .line{
+    left: 30%;
 }
-.Container2 .menu .li:nth-child(4):hover ~ .line{
+.Container2 .menu li:nth-child(4):hover ~ .line{
+    left: 45%;
+}
+.Container2 .menu li:nth-child(5):hover ~ .line{
     left: 60%;
 }
-.Container2 .menu .li:nth-child(5):hover ~ .line{
-    left: 80%;
+.Container2 .menu li:nth-child(6):hover ~ .line{
+    left: 75%;
 }
-.Container2 .menu .li:nth-child(6):hover ~ .line{
-    left: 100%;
+.Container2 .menu li:nth-child(7):hover ~ .line{
+    left: 90%;
 }
-.Container2 .menu .li:nth-child(7):hover ~ .line{
-    left: 120%;
-}
-/*.icons{
+.icons{
     list-style: none;
 }
 .icons li{
+    text-align: center;
     height: 70px;
     width: 70px;
     display: inline-block;
@@ -104,7 +111,7 @@ html.body{
 .icons li:hover a span{
     transform: scale(1.2);
 }
-*/
+
 .Fondo{
     width: 50%;
     height: 100vh;
@@ -163,4 +170,12 @@ html.body{
     width: 100%;
     height: 100%;
     margin-top: 34px;
+}
+.info{
+    padding: 10px;
+}
+.info span{
+    color: #333;
+    font-size: 18px;
+    font-family: sans-serif;
 }
