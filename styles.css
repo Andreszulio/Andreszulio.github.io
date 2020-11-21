@@ -5,17 +5,126 @@
     padding: 0;
     font-family: 'Courgette', cursive;
 }
+html.body{
+    display: grid;
+    height: 100%;
+}
 .Container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+.Container2{
+    height: 80px;
+    width: 50vw;
+    line-height: 80px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.Container2 .menu{
+    display: flex;
+    position: relative;
+}
+.Container2 .menu .li{
+    list-style: none;
+    flex: 1;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+.Container2 .menu .li .a{
+    color: #1d1f20;
+    transition: color 0.3s ease;
+}
+.Container2 .menu .li:hover .a{
+    color: #f23b26;
+}
+.Container2 .menu .li:first-child .a{
+    color: #f23b26;
+}
+.Container2 .menu .line{
+     height: 5px;
+     width: 20%;
+     background: #f23b26;
+     left: 0;
+     bottom: 0;
+     transition: all 0.3s ease;
+}
+.Container2 .menu .li:nth-child(2):hover ~ .line{
+    left: 20%;
+}
+.Container2 .menu .li:nth-child(3):hover ~ .line{
+    left: 40%;
+}
+.Container2 .menu .li:nth-child(4):hover ~ .line{
+    left: 60%;
+}
+.Container2 .menu .li:nth-child(5):hover ~ .line{
+    left: 80%;
+}
+.Container2 .menu .li:nth-child(6):hover ~ .line{
+    left: 100%;
+}
+.Container2 .menu .li:nth-child(7):hover ~ .line{
+    left: 120%;
+}
+/*.icons{
+    list-style: none;
+}
+.icons li{
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+.icons li:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border-radius: 10%;
+    background: linear-gradient(45deg, #7b00e0, #ae31d9);
+    transition: all 0.3s ease-in;
+}
+.icons li:hover:before{
+    transform: rotate(360deg);
+    border-radius: 100%;
+}
+.icons li a span{
+    font-size: 27px;
+    line-height: 70px;
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+.icons li:hover a span{
+    transform: scale(1.2);
+}
+*/
 .Fondo{
     width: 50%;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+}
+.Designer{
+    position: absolute;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 100;
+    bottom: 20px;
+    left: 20px;
+}
+.Designer h3{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
 }
 .Fondo img{
     width: 100%;
